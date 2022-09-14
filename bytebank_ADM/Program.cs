@@ -19,6 +19,8 @@ paula.Nome = "Paula";
 paula.Cpf = "12345";
 paula.Salario = 2000;
 
+Funcionario andre = new Diretor();
+
 Console.WriteLine("Bonificação: " + pedro.getBonificacao());
 Console.WriteLine("Bonificação: " + paula.getBonificacao());
 
