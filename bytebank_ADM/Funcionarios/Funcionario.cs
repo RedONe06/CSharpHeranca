@@ -22,7 +22,7 @@ namespace bytebank_ADM.Funcionarios
             Console.WriteLine("Criando um funcionário");
             totalDeFuncionarios++;
         }
-
+        
         public abstract double AumentarSalario();
         public abstract double getBonificacao();
         

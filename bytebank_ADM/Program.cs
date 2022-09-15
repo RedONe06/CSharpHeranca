@@ -1,7 +1,9 @@
 ﻿using bytebank_ADM.Funcionarios;
+using bytebank_ADM.Sistema;
 using bytebank_ADM.Utilitarios;
 
 Console.WriteLine("Boas vindas ao ByteBank ADM!");
+UsarSistema();
 CalcularBonificacao();
 
 void CalcularBonificacao()
@@ -29,5 +31,26 @@ void CalcularBonificacao()
     gerenciador.Registrar(samya);
 
     Console.WriteLine("Total de Bonificação: " + gerenciador.getBonificacao()); 
+}
+
+void UsarSistema()
+{
+    SistemaInterno sistemaInterno = new SistemaInterno();
+
+    Diretor roberta = new Diretor("159.753.398-04");
+    roberta.Nome = "Roberta";
+    roberta.Senha = "123";
+
+    GerenteDeContas ursula = new GerenteDeContas("326.985.628-89");
+    ursula.Nome = "Ursula";
+    ursula.Senha = "321";
+
+    //Funcionario pedro = new Designer("12414");
+    //pedro.Nome = "Pedro";
+    //pedro.Senha = "123";
+
+    //sistemaInterno.Logar(pedro, "123");
+    sistemaInterno.Logar(roberta, "123");
+    sistemaInterno.Logar(ursula, "321");
 }
 Console.ReadKey();
